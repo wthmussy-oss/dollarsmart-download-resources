@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf5f1">
+  <meta name="description" content="Explore free DollarSmartGuides planners, trackers, and practical guides. Choose a resource and download your copy.">
+  <title>Your Free Resource Library | DollarSmartGuides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#252b3a;--muted:#687080;--rose:#b95778;--rose-dark:#98435f;--cream:#fbf5f1;--line:#eee3df;--white:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+    .page{min-height:100vh;display:flex;flex-direction:column}
+    header{text-align:center;padding:34px 20px 12px}
+    .brand{font-size:.78rem;font-weight:700;letter-spacing:.19em;color:var(--rose);text-decoration:none}
+    main{width:min(100% - 36px,760px);margin:42px auto 64px;flex:1}
+    .intro{text-align:center;margin:0 auto 34px;max-width:650px}
+    h1,h2{font-family:"Playfair Display",Georgia,serif;line-height:1.2}
+    h1{font-size:clamp(2.25rem,6vw,3.55rem);margin:0 0 15px;letter-spacing:-.035em}
+    .intro p{margin:0;color:var(--muted);font-size:1.06rem}
+    .download-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,42px);box-shadow:0 16px 45px rgba(65,43,48,.06)}
+    .eyebrow{color:var(--rose);font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin:0 0 8px}
+    h2{font-size:1.8rem;margin:0 0 8px}
+    .card-copy{color:var(--muted);margin:0 0 25px}
+    label{display:block;font-weight:700;font-size:.92rem;margin:0 0 9px}
+    select{width:100%;min-height:54px;border:1px solid #dcd4d1;border-radius:12px;background:#fff;color:var(--ink);padding:0 15px;font:inherit;font-size:1rem}
+    select:focus-visible,button:focus-visible{outline:3px solid rgba(185,87,120,.28);outline-offset:3px}
+    .resource-detail{min-height:58px;margin:14px 0 18px;color:var(--muted);font-size:.94rem}
+    .download-btn{width:100%;min-height:54px;border:0;border-radius:12px;background:var(--rose);color:#fff;font:700 1rem "DM Sans",sans-serif;cursor:pointer;transition:background .2s,transform .2s}
+    .download-btn:hover:not(:disabled){background:var(--rose-dark);transform:translateY(-1px)}
+    .download-btn:disabled{opacity:.48;cursor:not-allowed}
+    .library{margin-top:46px}
+    .library h2{text-align:center;font-size:1.7rem;margin-bottom:22px}
+    .resource-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .resource-item{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:15px;padding:18px}
+    .resource-item h3{font-size:.98rem;margin:0 0 5px}
+    .resource-item p{font-size:.88rem;color:var(--muted);margin:0}
+    footer{text-align:center;padding:24px 18px 30px;color:var(--muted);font-size:.85rem}
+    footer strong{color:var(--ink)}
+    @media(max-width:560px){header{padding-top:26px}main{margin-top:32px}.resource-list{grid-template-columns:1fr}.download-card{border-radius:18px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header><a class="brand" href="https://dollarsmartguides.com/">DOLLARSMARTGUIDES.COM</a></header>
+    <main>
+      <section class="intro">
+        <h1>Your Free Resource Library</h1>
+        <p>Your free guides, planners, and tools are ready. Choose a resource below to download your copy.</p>
+      </section>
+      <section class="download-card" aria-labelledby="download-heading">
+        <p class="eyebrow">Made to help you move forward</p>
+        <h2 id="download-heading">Download Your Resource</h2>
+        <p class="card-copy">Select the freebie you want and we'll get your download ready.</p>
+        <label for="resource-select">Choose your free resource</label>
+        <select id="resource-select">
+          <option value="">Choose your free resource</option>
+          <option value="mystery">Mystery Shopper Starter Kit</option>
+          <option value="stress">Low-Stress Job Finder</option>
+          <option value="wordpress">WordPress Launch Checklist</option>
+          <option value="debt">Debt Payoff Tracker</option>
+          <option value="christmas">Christmas Savings Tracker</option>
+          <option value="savings"> $10,000 Savings Challenge Tracker</option>
+        </select>
+        <p class="resource-detail" id="resource-description" aria-live="polite">Your selected resource's description will appear here.</p>
+        <button class="download-btn" id="download-button" type="button" disabled>Download Your Freebie</button>
+      </section>
+      <section class="library" aria-labelledby="library-heading">
+        <h2 id="library-heading">Inside the Library</h2>
+        <div class="resource-list">
+          <article class="resource-item"><h3>Mystery Shopper Starter Kit</h3><p>A starter kit to help you explore mystery shopping opportunities.</p></article>
+          <article class="resource-item"><h3>Low-Stress Job Finder</h3><p>A guide to help you explore lower-stress job options.</p></article>
+          <article class="resource-item"><h3>WordPress Launch Checklist</h3><p>A checklist to help you prepare your WordPress website launch.</p></article>
+          <article class="resource-item"><h3>Debt Payoff Tracker</h3><p>A tracker to help you organize and monitor your debt payoff progress.</p></article>
+          <article class="resource-item"><h3>Christmas Savings Tracker</h3><p>A savings tracker to help you prepare for holiday expenses.</p></article>
+          <article class="resource-item"><h3>$10,000 Savings Challenge Tracker</h3><p>A printable tracker to help you work toward a $10,000 savings goal.</p></article>
+        </div>
+      </section>
+    </main>
+    <footer><strong>DollarSmartGuides</strong> · © <span id="year"></span> All rights reserved.</footer>
+  </div>
+  <script>
+    const resources = {
+      mystery: { description: "A starter kit to help you explore mystery shopping opportunities.", url: "https://drive.google.com/uc?export=download&id=1hz1BNnrGvqLyMrVIHN4v1QhwZg1pu47B" },
+      stress: { description: "A guide to help you explore lower-stress job options.", url: "https://drive.google.com/uc?export=download&id=1WBhzMpzQc9OufviN-AqQHH58PsINisEB" },
+      wordpress: { description: "A checklist to help you prepare your WordPress website launch.", url: "https://drive.google.com/uc?export=download&id=1McV_ymSlnN-bF24FxYSW934ath3A48cA" },
+      debt: { description: "A tracker to help you organize and monitor your debt payoff progress.", url: "https://drive.google.com/uc?export=download&id=1T0U9B-jtDK3BdZnXJVhcQXVjYdbxGNv5" },
+      christmas: { description: "A savings tracker to help you prepare for holiday expenses.", url: "https://drive.google.com/uc?export=download&id=1yqxE1Qdb34RZ8YFuIj0ON6hZCXyDlWsX" },
+      savings: { description: "A printable tracker to help you work toward a $10,000 savings goal.", url: "https://drive.google.com/uc?export=download&id=1ChIE0cp7lhqZyHGFRKMDmidRSC8VqJtz" }
+    };
+    const select = document.getElementById("resource-select");
+    const description = document.getElementById("resource-description");
+    const button = document.getElementById("download-button");
+    select.addEventListener("change", () => {
+      const item = resources[select.value];
+      description.textContent = item ? item.description : "Your selected resource's description will appear here.";
+      button.disabled = !item;
+    });
+    button.addEventListener("click", () => {
+      const item = resources[select.value];
+      if (item) window.open(item.url, "_blank", "noopener,noreferrer");
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
